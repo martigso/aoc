@@ -74,14 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2b09ebbf5ce0d5b7b0528d5c19d58060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-fdcb23725965bd29e5002a22e1a2a674.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0d14cc94b5b9915869995ba88a4807ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-c3dadd5bfd863c61a24f5a428e3f574e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -107,41 +107,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advent of Code</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2024-01/day1.html">2024</a></li><li class="breadcrumb-item"><a href="../2024-01/day1.html">Day 1: Historian Hysteria</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2024-01/day1.html">2024</a></li><li class="breadcrumb-item"><a href="../2024-01/day1.html">Day 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">Solutions</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -229,49 +226,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-01/day1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 1: Calorie Counting —</span></a>
+ <span class="menu-text">Day 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-02/day2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 2: Rock Paper Scissors —</span></a>
+ <span class="menu-text">Day 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-03/day3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 3: Rucksack Reorganization —</span></a>
+ <span class="menu-text">Day 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-04/day4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 4: Camp Cleanup —</span></a>
+ <span class="menu-text">Day 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-05/day5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 5: Supply Stacks —</span></a>
+ <span class="menu-text">Day 5:</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-06/day6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 6: Tuning Trouble —</span></a>
+ <span class="menu-text">Day 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-07/day7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 7: No Space Left On Device —</span></a>
+ <span class="menu-text">Day 7:</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2022-08/day8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">— Day 8: Treetop Tree House —</span></a>
+ <span class="menu-text">Day 8</span></a>
   </div>
 </li>
       </ul>
@@ -287,8 +284,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">2023-01/day1.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../2023-01/2023-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -304,13 +304,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2024-01/day1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Day 1: Historian Hysteria</span></a>
+ <span class="menu-text">Day 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../2024-02/day2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 2: Red-Nosed Reports —</span></a>
+ <span class="menu-text">Day 2</span></a>
   </div>
 </li>
       </ul>
@@ -325,18 +325,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#day-1-historian-hysteria" id="toc-day-1-historian-hysteria" class="nav-link active" data-scroll-target="#day-1-historian-hysteria">Day 1: Historian Hysteria</a></li>
+  <li><a href="#day-1" id="toc-day-1" class="nav-link active" data-scroll-target="#day-1">Day 1</a>
+  <ul class="collapse">
+  <li><a href="#historian-hysteria" id="toc-historian-hysteria" class="nav-link" data-scroll-target="#historian-hysteria">Historian Hysteria</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2024-01/day1.html">2024</a></li><li class="breadcrumb-item"><a href="../2024-01/day1.html">Day 1: Historian Hysteria</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2024-01/day1.html">2024</a></li><li class="breadcrumb-item"><a href="../2024-01/day1.html">Day 1</a></li></ol></nav></header>
 
 
 
 
-<section id="day-1-historian-hysteria" class="level1">
-<h1>Day 1: Historian Hysteria</h1>
+<section id="day-1" class="level1">
+<h1>Day 1</h1>
+<section id="historian-hysteria" class="level2">
+<h2 class="anchored" data-anchor-id="historian-hysteria">Historian Hysteria</h2>
 <p>The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.</p>
 <p>As each location is checked, they will mark it on their list with a star. They figure the Chief Historian must be in one of the first fifty places they’ll look, so in order to save Christmas, you need to help them get fifty stars on their list before Santa takes off on December 25th.</p>
 <p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!</p>
@@ -418,6 +423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -986,8 +992,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../2024-02/day2.html" class="pagination-link" aria-label="Day 2: Red-Nosed Reports ---">
-        <span class="nav-page-text">Day 2: Red-Nosed Reports —</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../2024-02/day2.html" class="pagination-link" aria-label="Day 2">
+        <span class="nav-page-text">Day 2</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
