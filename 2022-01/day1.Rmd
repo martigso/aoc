@@ -1,10 +1,6 @@
----
-title: "Advent of Code 2022 -- Day 1"
-author: "Martin Søyland"
-output: github_document
----
 
 # Part 1
+
 --- Day 1: Calorie Counting ---
 Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of star fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
 
@@ -44,7 +40,7 @@ In case the Elves get hungry and need extra snacks, they need to know which Elf 
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
 ```{r}
-raw <- readLines("../../data/day1.txt")
+raw <- readLines("day1.txt")
 
 library(dplyr)
 

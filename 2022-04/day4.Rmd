@@ -1,9 +1,3 @@
----
-title: "Advent of Code 2022 -- Day 2"
-author: "Martin Søyland"
-output: github_document
----
-
 # Part 1
 
 
@@ -54,7 +48,7 @@ In how many assignment pairs does one range fully contain the other?
 ```{r}
 library(stringr)
 
-input <- readLines("../../data/day4.txt")
+input <- readLines("day4.txt")
 
 lapply(input, function(x){
   

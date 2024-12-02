@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+
+execute:
+  cache: true
+  
+website:
+  title: |
+    ![](/pics/uio-logo-white.png){width=150} | STV4030A
+  favicon: /pics/favicon.png
+  page-navigation: true
+  page-footer:
+    background: "#B60000"
+    center: |
+      ![](/pics/uio-logo-white.png){width=150}
+  navbar: 
+    background: "#B60000"
+    foreground: "#ffffff"
+    search: true
+  sidebar:
+    title: "STV4030A"
+    style: docked
+    type: dark
+    alignment: right
+    background: "#000000"
+    foreground: "#ffffff"
+    contents:
+      - href: index.qmd
+        text: "Home"
+      - text: "----"
+      - section: "2021"
+        contents: 
+          - basics_refresh/R_refresher.qmd
+          - basics_refresh/Beyond_the_basics.qmd
+          - basics_refresh/Functions.qmd
+          - basics_refresh/Iteration.qmd
+          - basics_refresh/encoding.qmd
+      - text: "----"
+
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    toc: true
+    mainfont: arial

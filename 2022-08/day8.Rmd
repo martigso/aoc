@@ -1,9 +1,3 @@
----
-title: "Advent of Code 2022 -- Day 8"
-author: "Martin Søyland"
-output: github_document
----
-
 
 # Part 1
 
@@ -49,7 +43,7 @@ Consider your map; how many trees are visible from outside the grid?
 
 
 ```{r}
-input <- readLines("../../data/day8.txt")
+input <- readLines("day8.txt")
 
 trees <- strsplit(input, "")
 trees <- lapply(trees, as.numeric)

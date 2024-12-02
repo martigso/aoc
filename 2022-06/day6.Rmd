@@ -1,8 +1,3 @@
----
-title: "Advent of Code 2022 -- Day 6"
-author: "Martin Søyland"
-output: github_document
----
 
 # Part 1
 
@@ -40,7 +35,7 @@ How many characters need to be processed before the first start-of-packet marker
 
 
 ```{r}
-input <- readLines("../../data/day6.txt")
+input <- readLines("day6.txt")
 
 findMarker <- function(input, stream_length){
   

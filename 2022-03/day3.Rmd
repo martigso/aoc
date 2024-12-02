@@ -1,8 +1,3 @@
----
-title: "Advent of Code 2022 -- Day 3"
-author: "Martin Søyland"
-output: github_document
----
 
 # Part 1
 
@@ -41,7 +36,7 @@ Find the item type that appears in both compartments of each rucksack. What is t
 ```{r, message=FALSE}
 library(dplyr)
 
-input <- readLines("../../data/day3.txt")
+input <- readLines("day3.txt")
 
 scores <- data.frame(letters = c(letters, LETTERS),
                      score = 1:52)

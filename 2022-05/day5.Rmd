@@ -1,8 +1,3 @@
----
-title: "Advent of Code 2022 -- Day 5"
-author: "Martin Søyland"
-output: github_document
----
 
 # Part 1
 
@@ -62,7 +57,7 @@ After the rearrangement procedure completes, what crate ends up on top of each s
 # Restructuring data (there must be a better way)
 library(stringr)
 
-input <- readLines("../../data/day5.txt")
+input <- readLines("day5.txt")
 
 stacks <- input[1:8]
 instructions <- input[11:length(input)]
