@@ -2,42 +2,51 @@ project:
   type: website
   output-dir: docs
 
-execute:
-  cache: true
-  
 website:
   title: |
-    ![](/pics/uio-logo-white.png){width=150} | STV4030A
-  favicon: /pics/favicon.png
+    Advent of Code
   page-navigation: true
-  page-footer:
-    background: "#B60000"
-    center: |
-      ![](/pics/uio-logo-white.png){width=150}
-  navbar: 
-    background: "#B60000"
-    foreground: "#ffffff"
-    search: true
   sidebar:
-    title: "STV4030A"
+    title: "Solutions"
     style: docked
     type: dark
     alignment: right
-    background: "#000000"
-    foreground: "#ffffff"
     contents:
       - href: index.qmd
         text: "Home"
       - text: "----"
       - section: "2021"
         contents: 
-          - basics_refresh/R_refresher.qmd
-          - basics_refresh/Beyond_the_basics.qmd
-          - basics_refresh/Functions.qmd
-          - basics_refresh/Iteration.qmd
-          - basics_refresh/encoding.qmd
+          - 2021-01/day1.qmd
+          - 2021-02/day2.qmd
+          - 2021-03/day3.qmd
+          - 2021-04/day4.qmd
+          - 2021-05/day5.qmd
+          - 2021-06/day6.qmd
+          - 2021-07/day7.qmd
+          - 2021-08/day8.qmd
+          - 2021-09/day9.qmd
       - text: "----"
-
+      - section: "2022"
+        contents:
+          - 2022-01/day1.Rmd
+          - 2022-02/day2.Rmd
+          - 2022-03/day3.Rmd
+          - 2022-04/day4.Rmd
+          - 2022-05/day5.Rmd
+          - 2022-06/day6.Rmd
+          - 2022-07/day7.Rmd
+          - 2022-08/day8.Rmd
+      - text: "----"
+      - section: "2023"
+        contents:
+          - 2023-01/day1.qmd
+      - text: "----"
+      - section: "2024"
+        contents:
+          - 2024-01/day1.qmd
+          - 2024-02/day2.qmd
+          
 
 format:
   html:
@@ -46,3 +55,6 @@ format:
       dark: darkly
     toc: true
     mainfont: arial
+
+execute:
+  cache: true

@@ -1,10 +1,6 @@
----
-title: "2023-01"
-subtitle: "Day 1: Trebuchet?!"
-author: "Martin Søyland"
----
 
-# Part 1
+
+# Day 1
 
 ## Puzzle text
 
