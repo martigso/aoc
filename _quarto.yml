@@ -49,6 +49,10 @@ website:
         contents:
           - 2024-01/day1.qmd
           - 2024-02/day2.qmd
+          - 2024-03/day3.qmd
+          - 2024-04/day4.qmd
+          - 2024-05/day5.qmd
+          - 2024-06/day6.qmd
           
 
 format:
