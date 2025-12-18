@@ -53,6 +53,10 @@ website:
           - 2024-04/day4.qmd
           - 2024-05/day5.qmd
           - 2024-06/day6.qmd
+      - text: "----"
+      - section: "2025"
+        contents:
+          - 2025-01/day1.qmd
           
 
 format:

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Martin Søyland">
 
-<title>Home – Advent of Code</title>
+<title>day1 – Advent of Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,31 +20,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-73a7d9b0b7dbac12428342d88fbea5df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5c660db51a8e09e0789012333e832b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-73a7d9b0b7dbac12428342d88fbea5df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-73a7d9b0b7dbac12428342d88fbea5df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5c660db51a8e09e0789012333e832b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-73a7d9b0b7dbac12428342d88fbea5df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -246,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Advent of Code</span>
     </a>
   </div>
@@ -261,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2025-01/day1.html">2025</a></li><li class="breadcrumb-item"><a href="../2025-01/day1.html">Day 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -275,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -291,55 +325,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-01/day1.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-01/day1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-02/day2.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-02/day2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-03/day3.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-03/day3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-04/day4.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-04/day4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-05/day5.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-05/day5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-06/day6.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-06/day6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-07/day7.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-07/day7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-08/day8.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-08/day8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2021-09/day9.html" class="sidebar-item-text sidebar-link">
+  <a href="../2021-09/day9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 9</span></a>
   </div>
 </li>
@@ -357,49 +391,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-01/day1.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-01/day1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-02/day2.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-02/day2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-03/day3.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-03/day3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-04/day4.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-04/day4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-05/day5.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-05/day5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 5:</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-06/day6.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-06/day6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-07/day7.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-07/day7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 7:</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2022-08/day8.html" class="sidebar-item-text sidebar-link">
+  <a href="../2022-08/day8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 8</span></a>
   </div>
 </li>
@@ -417,7 +451,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2023-01/2023-01.html" class="sidebar-item-text sidebar-link">
+  <a href="../2023-01/2023-01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 1</span></a>
   </div>
 </li>
@@ -435,37 +469,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024-01/day1.html" class="sidebar-item-text sidebar-link">
+  <a href="../2024-01/day1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024-02/day2.html" class="sidebar-item-text sidebar-link">
+  <a href="../2024-02/day2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024-03/day3.html" class="sidebar-item-text sidebar-link">
+  <a href="../2024-03/day3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024-04/day4.html" class="sidebar-item-text sidebar-link">
+  <a href="../2024-04/day4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024-05/day5.html" class="sidebar-item-text sidebar-link">
+  <a href="../2024-05/day5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 5:</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024-06/day6.html" class="sidebar-item-text sidebar-link">
+  <a href="../2024-06/day6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 6</span></a>
   </div>
 </li>
@@ -483,7 +517,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2025-01/day1.html" class="sidebar-item-text sidebar-link">
+  <a href="../2025-01/day1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Day 1</span></a>
   </div>
 </li>
@@ -494,41 +528,217 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#day-1" id="toc-day-1" class="nav-link active" data-scroll-target="#day-1">Day 1</a>
+  <ul class="collapse">
+  <li><a href="#secret-entrance" id="toc-secret-entrance" class="nav-link" data-scroll-target="#secret-entrance">Secret Entrance</a>
+  <ul class="collapse">
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2025-01/day1.html">2025</a></li><li class="breadcrumb-item"><a href="../2025-01/day1.html">Day 1</a></li></ol></nav></header>
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Home</h1>
+
+
+
+<section id="day-1" class="level1">
+<h1>Day 1</h1>
+<section id="secret-entrance" class="level2">
+<h2 class="anchored" data-anchor-id="secret-entrance">Secret Entrance</h2>
+<p>The Elves have good news and bad news.</p>
+<p>The good news is that they’ve discovered project management! This has given them the tools they need to prevent their usual Christmas emergency. For example, they now know that the North Pole decorations need to be finished soon so that other critical tasks can start on time.</p>
+<p>The bad news is that they’ve realized they have a different emergency: according to their resource planning, none of them have any time left to decorate the North Pole!</p>
+<p>To save Christmas, the Elves need you to finish decorating the North Pole by December 12th.</p>
+<p>Collect stars by solving puzzles. Two puzzles will be made available on each day; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!</p>
+<section id="part-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-1">Part 1</h3>
+<p>You arrive at the secret entrance to the North Pole base ready to start decorating. Unfortunately, the password seems to have been changed, so you can’t get in. A document taped to the wall helpfully explains:</p>
+<p>“Due to new security protocols, the password is locked in the safe below. Please see the attached document for the new combination.”</p>
+<p>The safe has a dial with only an arrow on it; around the dial are the numbers 0 through 99 in order. As you turn the dial, it makes a small click noise as it reaches each number.</p>
+<p>The attached document (your puzzle input) contains a sequence of rotations, one per line, which tell you how to open the safe. A rotation starts with an L or R which indicates whether the rotation should be to the left (toward lower numbers) or to the right (toward higher numbers). Then, the rotation has a distance value which indicates how many clicks the dial should be rotated in that direction.</p>
+<p>So, if the dial were pointing at 11, a rotation of R8 would cause the dial to point at 19. After that, a rotation of L19 would cause it to point at 0.</p>
+<p>Because the dial is a circle, turning the dial left from 0 one click makes it point at 99. Similarly, turning the dial right from 99 one click makes it point at 0.</p>
+<p>So, if the dial were pointing at 5, a rotation of L10 would cause it to point at 95. After that, a rotation of R5 could cause it to point at 0.</p>
+<p>The dial starts by pointing at 50.</p>
+<p>You could follow the instructions, but your recent required official North Pole secret entrance security training seminar taught you that the safe is actually a decoy. The actual password is the number of times the dial is left pointing at 0 after any rotation in the sequence.</p>
+<p>For example, suppose the attached document contained the following rotations:</p>
+<p>L68 L30 R48 L5 R60 L55 L1 L99 R14 L82</p>
+<p>Following these rotations would cause the dial to move as follows:</p>
+<p>The dial starts by pointing at 50. The dial is rotated L68 to point at 82. The dial is rotated L30 to point at 52. The dial is rotated R48 to point at 0. The dial is rotated L5 to point at 95. The dial is rotated R60 to point at 55. The dial is rotated L55 to point at 0. The dial is rotated L1 to point at 99. The dial is rotated L99 to point at 0. The dial is rotated R14 to point at 14. The dial is rotated L82 to point at 32.</p>
+<p>Because the dial points at 0 a total of three times during this process, the password in this example is 3.</p>
+<p>Analyze the rotations in your attached document. What’s the actual password to open the door?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>manual <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"input.txt"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># manual &lt;- c(</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L68",</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L30",</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  "R48",</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L5",</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  "R60",</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L55",</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L1",</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L99",</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  "R14",</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#  "L82",</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  "R300"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>position <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>end_numbers <span class="ot">&lt;-</span> <span class="fu">vector</span>()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(x <span class="cf">in</span> manual){</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  segment <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(x, <span class="st">"(?=[RL])"</span>, <span class="at">perl =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(segment[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"R"</span>) {</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    position <span class="ot">&lt;-</span> position <span class="sc">+</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    position <span class="ot">&lt;-</span> position <span class="sc">-</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">repeat</span> {</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(position <span class="sc">&lt;</span> <span class="dv">0</span>) {</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> <span class="dv">99</span> <span class="sc">-</span> (<span class="fu">abs</span>(position) <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(position <span class="sc">&gt;</span> <span class="dv">99</span>) {</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> position <span class="sc">-</span> <span class="dv">100</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(position <span class="sc">&lt;=</span> <span class="dv">99</span> <span class="sc">&amp;</span> position <span class="sc">&gt;=</span> <span class="dv">0</span>) {</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      end_numbers <span class="ot">&lt;-</span> <span class="fu">append</span>(end_numbers, position)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(end_numbers <span class="sc">==</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+FALSE  TRUE 
+ 3346  1100 </code></pre>
+</div>
+</div>
+</section>
+<section id="part-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-2">Part 2</h3>
+<p>You’re sure that’s the right password, but the door won’t open. You knock, but nobody answers. You build a snowman while you think.</p>
+<p>As you’re rolling the snowballs for your snowman, you find another security document that must have fallen into the snow:</p>
+<p>“Due to newer security protocols, please use password method 0x434C49434B until further notice.”</p>
+<p>You remember from the training seminar that “method 0x434C49434B” means you’re actually supposed to count the number of times any click causes the dial to point at 0, regardless of whether it happens during a rotation or at the end of one.</p>
+<p>Following the same rotations as in the above example, the dial points at zero a few extra times during its rotations:</p>
+<pre><code>The dial starts by pointing at 50.
+The dial is rotated L68 to point at 82; during this rotation, it points at 0 once.
+The dial is rotated L30 to point at 52.
+The dial is rotated R48 to point at 0.
+The dial is rotated L5 to point at 95.
+The dial is rotated R60 to point at 55; during this rotation, it points at 0 once.
+The dial is rotated L55 to point at 0.
+The dial is rotated L1 to point at 99.
+The dial is rotated L99 to point at 0.
+The dial is rotated R14 to point at 14.
+The dial is rotated L82 to point at 32; during this rotation, it points at 0 once.</code></pre>
+<p>In this example, the dial points at 0 three times at the end of a rotation, plus three more times during a rotation. So, in this example, the new password would be 6.</p>
+<p>Be careful: if the dial were pointing at 50, a single rotation like R1000 would cause the dial to point at 0 ten times before returning back to 50!</p>
+<p>Using password method 0x434C49434B, what is the password to open the door?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lookup <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">99</span>, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>lookup <span class="ot">&lt;-</span> lookup <span class="sc">|&gt;</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(x) <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">num =</span> <span class="dv">1</span>, </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">num =</span> <span class="fu">cumsum</span>(num), </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">.by =</span> x)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>position <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>clicks <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(x <span class="cf">in</span> manual){</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  segment <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(x, <span class="st">"(?=[RL])"</span>, <span class="at">perl =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(segment[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"R"</span>) {</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(position <span class="sc">+</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>]) <span class="sc">==</span> <span class="dv">100</span>) {</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>      clicks <span class="ot">&lt;-</span> clicks <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(position <span class="sc">+</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>]) <span class="sc">&gt;</span> <span class="dv">99</span>) {</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>      clicks <span class="ot">&lt;-</span> clicks <span class="sc">+</span> lookup<span class="sc">$</span>num[<span class="fu">which</span>(lookup<span class="sc">$</span>y <span class="sc">==</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>]) <span class="sc">-</span> (<span class="dv">100</span> <span class="sc">-</span> position))]</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> (position <span class="sc">+</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])) <span class="sc">%%</span> <span class="dv">100</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> position <span class="sc">+</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(segment[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"L"</span>) {</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>((<span class="dv">100</span> <span class="sc">-</span> position <span class="sc">-</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>      clicks <span class="ot">&lt;-</span> clicks <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(position <span class="sc">-</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>]) <span class="sc">&lt;</span> <span class="dv">0</span>) {</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>      clicks <span class="ot">&lt;-</span> clicks <span class="sc">+</span> lookup<span class="sc">$</span>num[<span class="fu">which</span>(lookup<span class="sc">$</span>y <span class="sc">==</span> <span class="fu">abs</span>(<span class="dv">100</span> <span class="sc">-</span> position <span class="sc">-</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])))]</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> (position <span class="sc">-</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])) <span class="sc">%%</span> <span class="dv">100</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>      position <span class="ot">&lt;-</span> position <span class="sc">-</span> <span class="fu">as.numeric</span>(segment[<span class="dv">2</span>])</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>clicks</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6358</code></pre>
+</div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Martin Søyland </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Under construction!</p>
-
-
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
