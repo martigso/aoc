@@ -1,6 +1,4 @@
-# Day 1
-
-## Secret Entrance
+# Day 1 -- Secret Entrance
 
 The Elves have good news and bad news.
 
@@ -12,7 +10,7 @@ To save Christmas, the Elves need you to finish decorating the North Pole by Dec
 
 Collect stars by solving puzzles. Two puzzles will be made available on each day; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
 
-### Part 1
+## Part 1
 
 You arrive at the secret entrance to the North Pole base ready to start decorating. Unfortunately, the password seems to have been changed, so you can't get in. A document taped to the wall helpfully explains:
 
@@ -125,7 +123,7 @@ table(end_numbers == 0)
 
 ```
 
-### Part 2
+## Part 2
 
 
 You're sure that's the right password, but the door won't open. You knock, but nobody answers. You build a snowman while you think.
