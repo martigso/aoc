@@ -66,6 +66,7 @@ format:
       dark: darkly
     toc: true
     mainfont: arial
+    code-line-numbers: true
 
 execute:
   cache: true
