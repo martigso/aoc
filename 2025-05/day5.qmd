@@ -109,7 +109,6 @@ repeat{
     
     if(ing_ranges$max[row] >= ing_ranges$min[row+1]) {
       
-      ing_ranges$min[row] <- ing_ranges$min[row]
       ing_ranges$max[row] <- ing_ranges$max[row+1]
       
       ing_ranges <- ing_ranges[-c(row+1), ]
@@ -127,7 +126,7 @@ repeat{
 
 head(ing_ranges)
 
-(ing_ranges$max - ing_ranges$min) |> sum()
+(ing_ranges$max - ing_ranges$min + 1) |> sum()
 
 ```
 
